@@ -2,16 +2,21 @@
 
 A Sensitive Button for iOS / 触感更灵敏的button控件
 
-## 中文
+## Chinese
+
+在我们的App项目中，我们的UI工程师有时候设计的按钮由于美观原因，设计得比较小，容易让用户误触或者不灵敏，这个时候我们就要从技术的角度去解决问题了。<br>
 
 苹果官方文档有介绍，每个UIButton的响应大小应不小于44*44，小于这个大小，会让用户感动难以使用。所以我们的Button样式大小不管有没有小于44*44，其响应的范围不能小于。<br>
 
 
 解决方法：<br>
-  自定义UIButton，重写其-(BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event方法,这个方法是： 判断触电是否在范围内
+
+  自定义UIButton，重写其-(BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event方法,这个方法是： 判断触电是否在范围内<br>
+  
   <pre><code>
     
-  code：
+ Code：
+  
  /* overRide pointInside */
  - (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event
  {
