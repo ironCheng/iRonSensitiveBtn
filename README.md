@@ -42,7 +42,7 @@ user-defined a UIButton ,override the method: -(BOOL)pointInside:(CGPoint)point 
 <pre><code>
  Code：
   
- /*  pointInside */
+ /* overRide pointInside */
  - (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event
  {
     CGRect bounds = self.bounds;
